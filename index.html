@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <title>
+            Resume Maker
+        </title> 
+        <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/side_pane.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+ <body>
+<div class="menu-wrap" >
+        <input type="checkbox" class="toggler" onchange= "adjust_width(this)" >
+        <div class="hamburger"><img src = "collapse.png"></div>
+        <div class="menu">
+          <div id = "left">
+              <div>
+                  <h1>INFORMATION GATHERING</h1>
+
+                <div class="container">
+                  <h3 class = "text-center inp_title">A. Personal Information</h3>
+                    <div class="row">
+                        <label class="col-md-2 col-md-2" >Name</label>
+                        <section class="col-md-8 col-sm-8 textbox">
+                            <input type="text" placeholder="Name" onkeyup="update(this)" id = "inp_name">
+                        </section>
+                    </div>
+                    <div class="row">
+                            <label class="col-md-2 col-sm-2" >Email</label>
+                            <section class="col-md-4 col-sm-4 textbox">
+                                <input type="text" placeholder="Email" id = "inp_email" onkeyup="update(this)">
+                            </section>
+                            <label class="col-md-2 col-sm-2" >Contact No.</label>
+                            <section class="col-md-4 col-sm-4 textbox">
+                                <input type="number" placeholder="Contact No." maxlength="10" minlength="10" id = "inp_cont" onkeyup="update(this)">
+                            </section>
+                    </div>
+                    <div class="row">
+                            <label class="col-md-2 col-sm-2" >Website</label>
+                            <section class="col-md-8 col-sm-8 textbox">
+                                <input type="text" placeholder="Website" onkeyup="update(this)" id = "inp_web">
+                            </section>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                        <h3 class = "text-center inp_title">B. EDUCATION</h3>
+                          <div class="row">
+                              <label class="col-md-3 col-md-3" >Instituion</label>
+                              <section class="col-md-9 col-sm-9 textbox">
+                                  <input type="text" placeholder="Institution Name" onkeyup="update(this)" id = "inp_inst1">
+                              </section>
+                          </div>
+                          <div class="row">
+                                  <label class="col-md-2 col-sm-2" >City</label>
+                                  <section class="col-md-4 col-sm-4 textbox">
+                                      <input type="text" placeholder="City" id = "inp_city1" onkeyup="update(this)">
+                                  </section>
+                                  <label class="col-md-2 col-sm-2" >State</label>
+                                  <section class="col-md-4 col-sm-4 textbox">
+                                      <input type="text"  placeholder="State" onkeyup="update(this)" onkeyup="update(this)" id = "inp_state1">
+                                  </section>
+                          </div>
+                          <div class="row">
+                                <label class="col-md-2 col-sm-2" >Study Program</label>
+                                <section class="col-md-8 col-sm-8 textbox">
+                                    <input type="text" placeholder="B.Tech/Sec. School etc.." onkeyup="update(this)" id = "inp_stdp1">
+                                </section>
+                        </div>
+                          <div class="row">
+                                  <label class="col-md-2 col-sm-2" >Field Of Study</label>
+                                  <section class="col-md-8 col-sm-8 textbox">
+                                      <input type="text" placeholder="Field Of Study(Can be Blank)" onkeyup="update(this)" id = "inp_fos1">
+                                  </section>
+                          </div>
+                      </div>
+                      <div class="container">
+                            <h3 class = "text-center inp_title">B. EDUCATION</h3>
+                              <div class="row">
+                                  <label class="col-md-3 col-md-3" >Instituion</label>
+                                  <section class="col-md-9 col-sm-9 textbox">
+                                      <input type="text" placeholder="Institution Name" onkeyup="update(this)" id = "inp_inst2">
+                                  </section>
+                              </div>
+                              <div class="row">
+                                      <label class="col-md-2 col-sm-2" >City</label>
+                                      <section class="col-md-4 col-sm-4 textbox">
+                                          <input type="text" placeholder="City" id = "inp_city2" onkeyup="update(this)">
+                                      </section>
+                                      <label class="col-md-2 col-sm-2" >State</label>
+                                      <section class="col-md-4 col-sm-4 textbox">
+                                          <input type="text"  placeholder="State" onkeyup="update(this)" onkeyup="update(this)" id = "inp_state2">
+                                      </section>
+                              </div>
+                              <div class="row">
+                                    <label class="col-md-2 col-sm-2" >Study Program</label>
+                                    <section class="col-md-8 col-sm-8 textbox">
+                                        <input type="text" placeholder="B.Tech/Sec. School etc.." onkeyup="update(this)" id = "inp_stdp2">
+                                    </section>
+                            </div>
+                              <div class="row">
+                                      <label class="col-md-2 col-sm-2" >Field Of Study</label>
+                                      <section class="col-md-8 col-sm-8 textbox">
+                                          <input type="text" placeholder="Field Of Study(Can be Blank)" onkeyup="update(this)" id = "inp_fos2">
+                                      </section>
+                              </div>
+                          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id =  "main" class= "row d-flex justify-content-center">
+        <h3 class="col-md-12 col-sm-12">Resume</h3>
+        <section id = "display" class = "col-md-8">
+            <!-- header section -->
+            <h2 class="col-md-12" id = "name" style = "font-size: 2vw;"></h2><br>
+            
+            <section class="row justify-content-center align-content-center" style="padding:0">
+                <span class="col-md-3 col-sm-3" id = "contact" style="align-content: right;"></span>
+                <span class="col-md-4 col-sm-4" id = "web" style="align-content: right;"></span>
+                <span class="col-md-5 col-sm-5" id = "email" style ="display :block ;" dir = "ltr"></span>
+            </section>
+        <!-- header -->
+        <hr>
+        <!-- Education -->
+        <section class="row" style = "margin : 0;" id = "education">
+        <h2 id = "title_edu"  class="col-md-12 text-left justify-content-left title" style="width: 100%;">EDUCATION</h2>
+
+            <span class="col-md-1 text-center" style="height : 100%;"> 1 </span>
+
+        <section class="col-md-11 justify-content-left align-content-left edu" style="padding :0;">
+            <section class="row" style="margin-bottom: 0; min-width: 40%;">
+                <span class="col-md-6 col-sm-4" id = "stdp1"></span>
+                <!-- <span class="col-md-6 col-sm-4" id = "fos1"></span><br> -->
+            </section>
+            <section class="row" style="margin-bottom: 0;">
+                <span class="col-md-6" id = "inst1" style="width: 100%;"></span>
+                <span class="col-md-3" id = "city1"></span>
+                <span class="col-md-3" id = "state1"></span>
+            </section>
+        </section>
+        <span class="col-md-1 justify-content-center align-content-center" style="height : 100%;"> * </span>
+        <section class="col-md-11 justify-content-left align-content-left edu" style="padding :0;">
+            <section class="row" style="margin-bottom: 0;">
+                <span class="col-md-4 col-sm-4" id = "stdp2"></span>
+                <span class="col-md-8 col-sm-4" id = "fos2"></span><br>
+            </section>
+            <section class="row" style="margin-bottom: 0;">
+                <span class="col-md-6" id = "inst2" style="width: 100%;"></span> <br>
+                <span class="col-md-3" id = "city2"></span>
+                <span class="col-md-3" id = "state2"></span>
+            </section>
+        </section>
+        
+    </section>
+
+    </section>
+    </div>
+
+
+    <!------------- SCRIPTS ---------------------->
+    <script src ="jquery.js"></script>
+ <script>
+     /*
+     * Updation of the elemets in resume
+     */
+    function update(input){
+        var text = input.value;
+        if(input.id == "inp_cont"){
+            text = "PHONE - " + text;
+            document.getElementById("contact").innerHTML = text;
+            return;
+        }
+        if(input.id == "inp_email"){
+            text = "EMAIL - " + text;
+            document.getElementById("email").innerHTML = text;
+            return;
+        }
+        if(input.id == "inp_web"){
+            text = "WEBSITE - " + text;
+            document.getElementById("web").innerHTML = text;
+            return;
+        }
+        var id = String(input.id).substring(4);
+        if(id == "fos1"){
+            if(text != "")
+                text =  "," + text;
+            var temp = String(document.getElementById("stdp1").innerHTML).split(',');   //bug in here
+            document.getElementById("stdp1").innerHTML = temp[0] + text;
+            return;
+        }
+
+        document.getElementById(id).innerHTML = text;
+
+    }
+
+    /**
+     * width adjustment of the resume
+    */
+    document.getElementById("main").style.width = String(window.innerWidth - document.getElementById("left").offsetWidth) + "px";
+    function adjust_width(accept){
+        // alert(document.getElementById("main").style.width);
+        if(document.getElementById("main").style.width == '100vw'){
+            document.getElementById("main").style.width = String(window.innerWidth - document.getElementById("left").offsetWidth) + "px";
+        }
+        else
+        document.getElementById("main").style.width = '100vw'; 
+        
+    }
+    $(window).resize(function() {
+        if(this.resizeTO) clearTimeout(this.resizeTO);
+        this.resizeTO = setTimeout(function() {
+            $(this).trigger('resizeEnd');
+        }, 500);
+    });
+    $(window).bind('resizeEnd', function() {
+        if(!(document.getElementById("main").style.width == '100vw'))
+            document.getElementById("main").style.width = String(window.innerWidth - document.getElementById("left").offsetWidth) + "px";
+            
+        
+    });        
+
+
+ </script>
+ 
+ </body>
+
+</html>

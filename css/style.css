@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+*{
+    margin : 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #2025308f;
+}
+#left > div  h1{
+    font-size:1.5em;
+    margin-bottom: 10%;
+}
+div h1,h2,h3{
+    color:white;
+}
+section{
+    margin: 0;
+}
+section h1,h2,h3,h4,h5,h6{
+    color:black;
+}
+h1,h3,h2{
+    margin: 0;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}   
+hr{ 
+    margin :0 0 10px 0;
+    height: 1px;
+    background:white;
+}
+.container h3{
+    color: white;
+    border-bottom: 1px solid  slategray;
+    margin-bottom: 5%;
+}
+label{
+    float: left;
+    margin: 0;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size:small;
+}
+.textbox{
+    display: inline-block;
+    font-size: 20px;
+    width:100%;
+    padding: 5px 0;
+    border: 1px solid #13cf9d;
+    border-radius :50px;
+    overflow: hidden;
+}
+.textbox input{
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    border:none;
+    outline: none;
+    background: none;
+    color: white;
+    width:80%;
+    float: left;
+    font-size:15px;
+    margin:0 10px;
+}
+.row{
+    margin-bottom: 5%;
+}
+
+#main{
+    margin:0;
+    position: relative;
+    height: 100%;
+    display: block;
+    /* width :30%; */
+    float: right;
+    color : black;
+    /* border : 2px solid orange; */
+    overflow-y: scroll;
+}
+#main > h3{
+    margin:0;
+    height:min-content;
+}
+#display{
+    font-size:0.7vw;
+    padding: 5px;
+    position: relative;
+    -webkit-box-shadow: 0 0 100px rgb(14, 11, 11);
+    box-shadow: 0 0 1000px rgb(14, 11, 11);
+    background-color: white;
+    height : 100%;
+    border : 2px solid black;
+}
+span {
+    font-size : 0.85vw;
+    margin:0;
+    padding:0;
+    width:min-content;
+    color:black;
+}
+.inp_title{
+    font-size:1em;
+}
+.title{
+    font-weight: 900;
+    font-size : 1rem;
+    border-bottom: 1px solid gray;
+}
+.edu{
+    display: inline-block;
+    flex-wrap: wrap;
+    background-color: rgba(128, 128, 128, 0.425);
+    border-radius: 5px;
+    border: 2 px solid white;
+}
+.edu span{
+    font-size:2em;
+}

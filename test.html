@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Resume Maker
+        </title> 
+    </head>
+ <body>
+    <h1 id= "test">vasu</h1>
+ </body>
+<script>
+       function htmlEscapeChars(string){
+        var escapechars = {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#39;',
+            '/': '&#x2F;',
+            '`': '&#x60;',
+            '=': '&#x3D;'
+          };
+          string = String(string).replace(/[&<>"'`=\/]/g, function (s) {
+            return escapechars[s];});
+          return string;
+
+    }
+    function encodeHTMLEntities(string) {
+        var textArea = document.createElement('textarea');
+        textArea.innerText = string;
+        return textArea.innerHTML;
+      }
+      var str = 'vasu " sharma';
+      str = encodeHTMLEntities(str);
+    //   str = htmlEscapeChars(str);
+      document.getElementById("test").className = str;
+
+</script>
+</html>
